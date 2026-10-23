@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anurag Janagama – Business Analytics, SAP SD & Digital Marketing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFFFFF;--surface:#FFFFFF;--navy:#0B2A5B;--ink:#0A0A0A;--muted:#4A5565;--accent:#0B2A5B;--accent2:#EEF2F9;--line:#D9DFEA;--bar:#0B2A5B;
+color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0A0A0A;--surface:#141414;--navy:#08162E;--ink:#FFFFFF;--muted:#B5BCC9;--accent:#FFC400;--accent2:#1B2A47;--line:#2A3550;--bar:#FFC400;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0A0A0A;--surface:#141414;--navy:#08162E;--ink:#FFFFFF;--muted:#B5BCC9;--accent:#FFC400;--accent2:#1B2A47;--line:#2A3550;--bar:#FFC400;color-scheme:dark}
+html{scroll-padding-top:4.5rem;scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:Manrope,"Public Sans",system-ui,sans-serif;line-height:1.15;margin:0;color:var(--ink)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--navy)}
+nav .wrap{display:flex;gap:1.25rem;align-items:center;overflow-x:auto;padding-top:.8rem;padding-bottom:.8rem;white-space:nowrap}
+nav b{font-family:Manrope,sans-serif;color:#fff;margin-right:auto}
+nav a{color:#C9D6EA;text-decoration:none;font-size:.95rem;font-weight:500}
+nav a:hover{color:#fff}
+.hero{background:linear-gradient(135deg,#0B2A5B 0%,#0A1F44 60%,#050B18 130%);color:#fff;padding:3.5rem 0 3.25rem}
+.hero h1{color:#fff;font-size:clamp(2.3rem,7vw,3.8rem);font-weight:800;letter-spacing:-.02em}
+.hero p{max-width:62ch;color:#C9D6EA;margin:1rem 0 0}
+.hero .role{font:600 1.2rem Manrope,sans-serif;color:#FFC83D;margin-top:.9rem}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}
+.stats div{border-left:3px solid #FFC83D;padding-left:.8rem}
+.stats strong{display:block;font:800 1.6rem Manrope,sans-serif;color:#fff}
+.stats span{font-size:.9rem;color:#C9D6EA}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.75rem}
+.btn{padding:.7rem 1.2rem;border-radius:6px;font-weight:600;text-decoration:none;border:2px solid #FFC83D;color:#fff}
+.btn.p{background:#FFC83D;color:#241450}
+section{padding:3.5rem 0 0}
+section>.wrap>h2{font-size:1.8rem;font-weight:800}
+.sub{color:var(--muted);max-width:66ch;margin:.5rem 0 1.5rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.25rem}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.card h3{font-size:1.05rem;margin-bottom:.4rem}
+.card p,.card ul{margin:.3rem 0 0;color:var(--muted);font-size:.975rem}
+.card ul{padding-left:1.1rem}
+.tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
+.tabs button{font:600 .95rem "Public Sans",sans-serif;padding:.55rem 1rem;border-radius:6px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--navy);border-color:#FFC400;color:#fff;box-shadow:inset 0 -3px 0 #FFC400}
+.dash{padding:0;overflow:hidden}
+.dh{background:var(--navy);color:#fff;padding:.8rem 1.25rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.9rem}
+.dh b{font-family:Manrope,sans-serif;font-size:1.05rem}
+.dh span{color:#C9D6EA}
+.db{padding:1.25rem}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem}
+.kpi{background:var(--accent2);border-top:3px solid #FFC400;border-radius:8px;padding:.8rem}
+.kpi span{display:block;font-size:.82rem;color:var(--muted)}
+.kpi strong{font:800 1.4rem Manrope,sans-serif}
+.charts{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:1.25rem}
+.ch h4{margin:0 0 .6rem;font:700 .95rem Manrope,sans-serif}
+.row{display:grid;grid-template-columns:8.5rem 1fr 3.2rem;gap:.5rem;align-items:center;font-size:.88rem;margin:.4rem 0}
+.trk{background:var(--accent2);border-radius:3px;height:14px}
+.trk i{display:block;height:100%;background:var(--bar);border-radius:3px}
+.row em{font-style:normal;text-align:right;color:var(--muted)}
+svg.ln{width:100%;height:auto;overflow:visible}
+svg.ln text{fill:var(--muted);font-size:10px}
+.q{margin-top:1.25rem;font-size:.92rem;color:var(--muted);border-top:1px solid var(--line);padding-top:.9rem}
+.tl{display:grid;gap:1rem}
+.job{display:grid;grid-template-columns:11rem 1fr;gap:1.25rem}
+.job .when{color:var(--muted);font-size:.92rem}
+dl.sk{margin:0;display:grid;grid-template-columns:12rem 1fr;gap:.8rem 1.5rem}
+dl.sk dt{font-weight:600}dl.sk dd{margin:0;color:var(--muted)}
+footer{margin-top:4rem;background:var(--navy);color:#C9D6EA;padding:2rem 0 2.5rem}
+footer a{color:#FFC83D}
+@media (max-width:760px){.stats,.kpis{grid-template-columns:1fr 1fr}.grid3,.charts{grid-template-columns:1fr}.job,dl.sk{grid-template-columns:1fr;gap:.2rem}dl.sk dd{margin-bottom:.7rem}.row{grid-template-columns:7rem 1fr 3rem}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>Anurag Janagama</b><a href="#dashboards">Dashboards</a><a href="#marketing">Marketing</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></nav>
+
+<header class="hero"><div class="wrap">
+  <h1>Anurag Janagama</h1>
+  <div class="role">Business analytics · SAP SD · Digital marketing</div>
+  <p>I combine an engineering degree, a marketing PGDM and an SAP S/4HANA Sales certification. I turn data into dashboards, work with customers directly and create photo and video content. I’m looking for an entry-level role in Hyderabad, Bangalore or Andhra Pradesh.</p>
+  <div class="stats">
+    <div><strong>200+</strong><span>client interactions handled</span></div>
+    <div><strong>SAP SD</strong><span>certified associate</span></div>
+    <div><strong>3</strong><span>languages: English, Telugu, Hindi</span></div>
+    <div><strong>B.Tech + PGDM</strong><span>EEE and Marketing</span></div>
+  </div>
+  <div class="btns"><a class="btn p" href="#dashboards">View dashboards</a><a class="btn" href="https://www.credly.com/badges/af3b6b40-4cd4-47c5-9655-e854a3854a82" rel="noopener">Verify SAP badge</a></div>
+</div></header>
+
+<section id="dashboards"><div class="wrap">
+  <h2>Dashboards</h2>
+  <p class="sub">Three business dashboards that show how I turn raw data into decisions. Switch between them below.</p>
+  <div class="tabs" role="tablist" id="tabs"></div>
+  <div class="card dash" id="dash" role="tabpanel"></div>
+</div></section>
+
+<section id="marketing"><div class="wrap">
+  <h2>Digital marketing and content</h2>
+  <p class="sub">Marketing is more than numbers. I handle both the analysis and the creative side.</p>
+  <div class="grid3">
+    <div class="card"><h3>Marketing foundation</h3><p>PGDM in Marketing Management with a Business Analytics minor, plus NPTEL certification in Integrated Marketing Management.</p></div>
+    <div class="card"><h3>Content creation</h3><p>Photography and videography: shooting, framing and editing visuals for social media posts, reels and campaign content.</p></div>
+    <div class="card"><h3>Marketing analytics</h3><ul><li>Customer and sales trends</li><li>Category and audience mix</li><li>Lead tracking in a CRM</li></ul></div>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <h2>Experience and projects</h2>
+  <div class="tl" style="margin-top:1.25rem">
+    <div class="card job"><div class="when">Jul 2025 to Sep 2025</div><div><h3>Business Development Associate Intern, Edufyi Tech Solutions</h3><ul><li>Handled 200+ client interactions by phone and email.</li><li>Maintained CRM records and tracked leads.</li><li>Prepared reports and presentations, and coordinated with internal teams.</li></ul></div></div>
+    <div class="card job"><div class="when">SAP certification training</div><div><h3>SAP S/4HANA SD: order-to-cash, pricing and master data</h3><p>Ran the full sales cycle from inquiry to billing and payment, and set up pricing and master data.</p></div></div>
+    <div class="card job"><div class="when">Engineering</div><div><h3>Electric and magnetic field of UHV AC lines</h3><p>Computed field strength around ultra-high-voltage transmission lines. Also completed workshops in electrical equipment testing, mini transformer assembly and drones.</p></div></div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2>Skills and education</h2>
+  <div class="card" style="margin-top:1.25rem"><dl class="sk">
+    <dt>Analytics</dt><dd>Power BI, Tableau, Advanced Excel, SQL, Python (basics), R (basics)</dd>
+    <dt>SAP</dt><dd>S/4HANA Sales and Distribution (SD)</dd>
+    <dt>Customer support</dt><dd>Voice process, chat support, query resolution, CRM tools, IT support</dd>
+    <dt>Creative</dt><dd>Photography, videography</dd>
+    <dt>Languages</dt><dd>English, Telugu, Hindi</dd>
+    <dt>Education</dt><dd>PGDM Marketing Management, International Institute of Business Studies (2024 to 2026)<br>B.Tech EEE, Mahatma Gandhi Institute of Technology (2020 to 2024)</dd>
+    <dt>Certifications</dt><dd>SAP Certified Associate (S/4HANA Cloud Private Edition, Sales), Power BI, Advanced Excel, Tally, Bloomberg ESG, NPTEL Integrated Marketing Management</dd>
+  </dl></div>
+</div></section>
+
+<footer id="contact"><div class="wrap">
+  <h2 style="color:#fff;font-size:1.4rem">Contact</h2>
+  <p>Ramagundam, Telangana · open to roles in Hyderabad, Bangalore and Andhra Pradesh. <a href="https://www.credly.com/badges/af3b6b40-4cd4-47c5-9655-e854a3854a82" rel="noopener">Verify my SAP certification</a>.</p><p><a href="mailto:anuragjanagama@gmail.com">anuragjanagama@gmail.com</a> · <a href="https://www.linkedin.com/in/anurag-janagama-aa6467275/" rel="noopener">LinkedIn</a></p>
+</div></footer>
+
+<script>
+var D=[
+{k:"Superstore",tool:"Sales and profit",t:"Superstore sales performance",
+ kp:[["Sales","$2.30M"],["Profit","$286K"],["Profit margin","12.5%"],["Orders","5,009"]],
+ b:["Sales by category ($K)",[["Technology",836],["Furniture",742],["Office Supplies",719]]],
+ l:["Sales by year ($K)",["2014","2015","2016","2017"],[484,470,609,733]],
+ q:"Question answered: which categories and years drive sales, and where does margin leak? Based on the public Sample Superstore dataset."},
+{k:"Blinkit",tool:"Quick commerce",t:"Quick-commerce orders and delivery",
+ kp:[["Orders","120K"],["Revenue","₹4.8 Cr"],["Avg delivery","11.4 min"],["Repeat customers","62%"]],
+ b:["Share of orders by category (%)",[["Dairy and bread",28],["Fruits and veg",22],["Snacks",18],["Beverages",14],["Personal care",10],["Other",8]]],
+ l:["Orders by time of day (K)",["8h","10h","12h","14h","16h","18h","20h","22h"],[6,9,11,8,10,15,18,12]],
+ q:"Question answered: when do customers order, what do they buy, and how fast do we deliver? Illustrative figures for a dashboard concept, not company data."},
+{k:"Netflix",tool:"Content library",t:"Netflix content library analysis",
+ kp:[["Titles","8,807"],["Movies","6,131"],["TV shows","2,676"],["Top rating","TV-MA"]],
+ b:["Titles by maturity rating",[["TV-MA",3207],["TV-14",2160],["TV-PG",863],["R",799],["PG-13",490]]],
+ l:["Titles added per year",["2016","2017","2018","2019","2020","2021"],[429,1188,1649,2016,1879,1498]],
+ q:"Question answered: what mix of content is being added, and for which audiences? Approximate figures based on the public Netflix titles dataset."}];
+var tabs=document.getElementById("tabs"),dash=document.getElementById("dash");
+function bars(b){var m=Math.max.apply(null,b[1].map(function(r){return r[1]}));
+ return '<div class="ch"><h4>'+b[0]+'</h4>'+b[1].map(function(r){return '<div class="row"><span>'+r[0]+'</span><div class="trk"><i style="width:'+(r[1]/m*100)+'%"></i></div><em>'+r[1].toLocaleString()+'</em></div>'}).join("")+'</div>'}
+function line(l){var w=320,h=130,p=18,m=Math.max.apply(null,l[2]),n=l[2].length,
+ pts=l[2].map(function(v,i){return [p+i*(w-2*p)/(n-1),h-p-(v/m)*(h-2*p)]});
+ return '<div class="ch"><h4>'+l[0]+'</h4><svg class="ln" viewBox="0 0 '+w+' '+(h+14)+'" role="img" aria-label="'+l[0]+'"><line x1="'+p+'" x2="'+(w-p)+'" y1="'+(h-p)+'" y2="'+(h-p)+'" stroke="var(--line)"/><polyline fill="none" stroke="var(--bar)" stroke-width="2.5" points="'+pts.map(function(q){return q.join(",")}).join(" ")+'"/>'+
+ pts.map(function(q,i){return '<circle cx="'+q[0]+'" cy="'+q[1]+'" r="3.5" fill="var(--bar)"/><text x="'+q[0]+'" y="'+(q[1]-8)+'" text-anchor="middle">'+l[2][i]+'</text><text x="'+q[0]+'" y="'+(h+8)+'" text-anchor="middle">'+l[1][i]+'</text>'}).join("")+'</svg></div>'}
+function show(i){var d=D[i];
+ Array.prototype.forEach.call(tabs.children,function(b,j){b.setAttribute("aria-selected",j===i)});
+ dash.innerHTML='<div class="dh"><b>'+d.t+'</b><span>'+d.tool+' · sample data</span></div><div class="db"><div class="kpis">'+
+ d.kp.map(function(k){return '<div class="kpi"><span>'+k[0]+'</span><strong>'+k[1]+'</strong></div>'}).join("")+'</div><div class="charts">'+bars(d.b)+line(d.l)+'</div><div class="q">'+d.q+'</div></div>'}
+D.forEach(function(d,i){var b=document.createElement("button");b.type="button";b.setAttribute("role","tab");b.textContent=d.k;b.onclick=function(){show(i)};tabs.appendChild(b)});
+show(0);
+</script>
+</body>
+</html>
