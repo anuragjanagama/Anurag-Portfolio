@@ -68,13 +68,17 @@ svg.ln text{fill:var(--muted);font-size:10px}
 .job .when{color:var(--muted);font-size:.92rem}
 dl.sk{margin:0;display:grid;grid-template-columns:12rem 1fr;gap:.8rem 1.5rem}
 dl.sk dt{font-weight:600}dl.sk dd{margin:0;color:var(--muted)}
+.fig{overflow-x:auto;margin-top:.8rem}.fig svg{min-width:560px;width:100%;height:auto;display:block}
+.bx{fill:var(--accent2);stroke:var(--bar);stroke-width:1.5}.tn{fill:var(--ink);font:700 11px "Public Sans",sans-serif}.tc{fill:var(--muted);font:500 10px "Public Sans",sans-serif}
+.hubs{display:grid;gap:1rem;margin-top:1.25rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:.7rem 0 0;padding:0;list-style:none}.chips li{background:var(--accent2);border-left:3px solid #FFC400;padding:.3rem .7rem;border-radius:4px;font-size:.92rem}
 footer{margin-top:4rem;background:var(--navy);color:#C9D6EA;padding:2rem 0 2.5rem}
 footer a{color:#FFC83D}
 @media (max-width:760px){.stats,.kpis{grid-template-columns:1fr 1fr}.grid3,.charts{grid-template-columns:1fr}.job,dl.sk{grid-template-columns:1fr;gap:.2rem}dl.sk dd{margin-bottom:.7rem}.row{grid-template-columns:7rem 1fr 3rem}}
 </style>
 </head>
 <body>
-<nav><div class="wrap"><b>Anurag Janagama</b><a href="#dashboards">Dashboards</a><a href="#marketing">Marketing</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></nav>
+<nav><div class="wrap"><b>Anurag Janagama</b><a href="#dashboards">Dashboards</a><a href="#sap">SAP SD</a><a href="#marketing">Marketing</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></nav>
 
 <header class="hero"><div class="wrap">
   <h1>Anurag Janagama</h1>
@@ -94,6 +98,17 @@ footer a{color:#FFC83D}
   <p class="sub">Three business dashboards that show how I turn raw data into decisions. Switch between them below.</p>
   <div class="tabs" role="tablist" id="tabs"></div>
   <div class="card dash" id="dash" role="tabpanel"></div>
+</div></section>
+
+<section id="sap"><div class="wrap">
+  <h2>SAP SD learning hub</h2>
+  <p class="sub">Projects from my SAP S/4HANA Sales certification training. The diagrams summarise the process I worked through.</p>
+  <div class="hubs">
+    <div class="card"><h3>Order-to-cash cycle</h3><p>Followed one sale from the first customer inquiry to payment, checking the document created at each step and how document flow links them.</p><div class="fig" id="f1"></div></div>
+    <div class="card"><h3>Pricing procedure</h3><p>Studied how SAP calculates a price: condition records feed a pricing procedure that adds the base price, applies discounts and then tax.</p><div class="fig" id="f2"></div></div>
+    <div class="card"><h3>Master data setup</h3><p>Set up the data every sale depends on: the customer, the material and the price records, which come together in the sales order.</p><div class="fig"><svg viewBox='0 0 640 150' role='img' aria-label='Master data feeding a sales order'><defs><marker id='m3' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0 0L8 4L0 8z' style='fill:var(--bar)'/></marker></defs><rect class='bx' x='10' y='8' width='190' height='38' rx='6'/><text class='tn' x='105' y='25' text-anchor='middle'>Customer (business partner)</text><text class='tc' x='105' y='39' text-anchor='middle'>BP</text><rect class='bx' x='10' y='56' width='190' height='38' rx='6'/><text class='tn' x='105' y='73' text-anchor='middle'>Material master</text><text class='tc' x='105' y='87' text-anchor='middle'>MM01</text><rect class='bx' x='10' y='104' width='190' height='38' rx='6'/><text class='tn' x='105' y='121' text-anchor='middle'>Pricing condition records</text><text class='tc' x='105' y='135' text-anchor='middle'>VK11</text><rect class='bx' x='270' y='48' width='130' height='54' rx='6'/><text class='tn' x='335' y='72' text-anchor='middle'>Sales order</text><text class='tc' x='335' y='88' text-anchor='middle'>VA01</text><rect class='bx' x='470' y='48' width='160' height='54' rx='6'/><text class='tn' x='550' y='72' text-anchor='middle'>Net price and tax</text><text class='tc' x='550' y='88' text-anchor='middle'>pricing result</text><g stroke-width='2' style='stroke:var(--bar)'><line x1='200' y1='27' x2='269' y2='68' marker-end='url(#m3)'/><line x1='200' y1='75' x2='269' y2='75' marker-end='url(#m3)'/><line x1='200' y1='123' x2='269' y2='82' marker-end='url(#m3)'/><line x1='400' y1='75' x2='469' y2='75' marker-end='url(#m3)'/></g></svg></div></div>
+    <div class="card"><h3>Key concepts I covered</h3><ul class="chips"><li>Sales area</li><li>Document flow</li><li>Condition technique</li><li>Item categories</li><li>Partner functions</li><li>Output determination</li></ul></div>
+  </div>
 </div></section>
 
 <section id="marketing"><div class="wrap">
@@ -123,14 +138,14 @@ footer a{color:#FFC83D}
     <dt>Customer support</dt><dd>Voice process, chat support, query resolution, CRM tools, IT support</dd>
     <dt>Creative</dt><dd>Photography, videography</dd>
     <dt>Languages</dt><dd>English, Telugu, Hindi</dd>
-    <dt>Education</dt><dd>PGDM Marketing Management, International Institute of Business Studies (2024 to 2026)<br>B.Tech EEE, Mahatma Gandhi Institute of Technology (2020 to 2024)</dd>
+    <dt>Education</dt><dd>PGDM Marketing Management, International Institute of Business Studies (2024 to 2026): 75.4%<br>B.Tech EEE, Mahatma Gandhi Institute of Technology (2020 to 2024): 61.8%<br>Intermediate (2019 to 2020): 81.8%<br>10th, Sacred Heart High School, Godavarikhani (2017 to 2018): 85%</dd>
     <dt>Certifications</dt><dd>SAP Certified Associate (S/4HANA Cloud Private Edition, Sales), Power BI, Advanced Excel, Tally, Bloomberg ESG, NPTEL Integrated Marketing Management</dd>
   </dl></div>
 </div></section>
 
 <footer id="contact"><div class="wrap">
   <h2 style="color:#fff;font-size:1.4rem">Contact</h2>
-  <p>Ramagundam, Telangana · open to roles in Hyderabad, Bangalore and Andhra Pradesh. <a href="https://www.credly.com/badges/af3b6b40-4cd4-47c5-9655-e854a3854a82" rel="noopener">Verify my SAP certification</a>.</p><p><a href="mailto:anuragjanagama@gmail.com">anuragjanagama@gmail.com</a> · <a href="https://www.linkedin.com/in/anurag-janagama-aa6467275/" rel="noopener">LinkedIn</a></p>
+  <p>Ramagundam, Telangana · open to roles in Hyderabad, Bangalore and Andhra Pradesh. <a href="https://www.credly.com/badges/af3b6b40-4cd4-47c5-9655-e854a3854a82" rel="noopener">Verify my SAP certification</a>.</p><p><a href="mailto:anuragjanagama@gmail.com">anuragjanagama@gmail.com</a> · <a href="https://www.linkedin.com/in/anurag-janagama-aa6467275/" rel="noopener">LinkedIn</a> · <a href="https://github.com/anuragjanagama" rel="noopener">GitHub</a></p>
 </div></footer>
 
 <script>
@@ -163,6 +178,11 @@ function show(i){var d=D[i];
  d.kp.map(function(k){return '<div class="kpi"><span>'+k[0]+'</span><strong>'+k[1]+'</strong></div>'}).join("")+'</div><div class="charts">'+bars(d.b)+line(d.l)+'</div><div class="q">'+d.q+'</div></div>'}
 D.forEach(function(d,i){var b=document.createElement("button");b.type="button";b.setAttribute("role","tab");b.textContent=d.k;b.onclick=function(){show(i)};tabs.appendChild(b)});
 show(0);
+function chain(id,steps,label){var n=steps.length,g=16,bw=Math.floor((620-(n-1)*g)/n),s=`<svg viewBox='0 0 640 72' role='img' aria-label='${label}'><defs><marker id='m${id}' viewBox='0 0 8 8' refX='7' refY='4' markerWidth='7' markerHeight='7' orient='auto'><path d='M0 0L8 4L0 8z' style='fill:var(--bar)'/></marker></defs>`;
+steps.forEach(function(t,i){var x=10+i*(bw+g);s+=`<rect class='bx' x='${x}' y='8' width='${bw}' height='54' rx='6'/><text class='tn' x='${x+bw/2}' y='32' text-anchor='middle'>${t[0]}</text><text class='tc' x='${x+bw/2}' y='48' text-anchor='middle'>${t[1]}</text>`;if(i<n-1)s+=`<line x1='${x+bw}' y1='35' x2='${x+bw+g-1}' y2='35' stroke-width='2' style='stroke:var(--bar)' marker-end='url(#m${id})'/>`});
+document.getElementById(id).innerHTML=s+'</svg>'}
+chain('f1',[['Inquiry','VA11'],['Quotation','VA21'],['Sales order','VA01'],['Delivery','VL01N'],['Goods issue','post'],['Billing','VF01'],['Payment','F-28']],'Order-to-cash process flow');
+chain('f2',[['Base price','PR00'],['Discount','K007'],['Net value','subtotal'],['Tax','tax condition'],['Total','to bill']],'Pricing procedure steps');
 </script>
 </body>
 </html>
